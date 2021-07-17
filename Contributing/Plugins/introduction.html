@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js coal">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction - Gwion</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Tutorial and reference for Gwion">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+                <link rel="stylesheet" href="../../custom.css">
+                <link rel="stylesheet" href="../../ansi2html.css">
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('coal')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../index.html">Welcome to Gwion</a></li><li class="chapter-item "><a href="../../Overview/index.html"><strong aria-hidden="true">1.</strong> Overview</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Overview/First_Steps/index.html"><strong aria-hidden="true">1.1.</strong> First Steps</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Overview/First_Steps/InstallingGwion.html"><strong aria-hidden="true">1.1.1.</strong> Installing gwion</a></li><li class="chapter-item "><a href="../../Overview/First_Steps/Configure.html"><strong aria-hidden="true">1.1.2.</strong> Configuring Gwion</a></li></ol></li><li class="chapter-item "><a href="../../Overview/declaration.html"><strong aria-hidden="true">1.2.</strong> Declarations</a></li><li class="chapter-item "><a href="../../Overview/globalvalues.html"><strong aria-hidden="true">1.3.</strong> Global Values</a></li><li class="chapter-item "><a href="../../Overview/Keywords.html"><strong aria-hidden="true">1.4.</strong> Keywords</a></li><li class="chapter-item "><a href="../../Overview/SpecialWords.html"><strong aria-hidden="true">1.5.</strong> Special Values</a></li><li class="chapter-item "><a href="../../Overview/Testing.html"><strong aria-hidden="true">1.6.</strong> Tests</a></li></ol></li><li class="chapter-item "><a href="../../Reference/index.html"><strong aria-hidden="true">2.</strong> Reference</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Reference/ControlFlow/index.html"><strong aria-hidden="true">2.1.</strong> Control Flow</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Reference/ControlFlow/ForLoop.html"><strong aria-hidden="true">2.1.1.</strong> For Loops</a></li><li class="chapter-item "><a href="../../Reference/ControlFlow/Repeat.html"><strong aria-hidden="true">2.1.2.</strong> the Repeat keyword</a></li><li class="chapter-item "><a href="../../Reference/ControlFlow/whileuntil.html"><strong aria-hidden="true">2.1.3.</strong> While Loops</a></li></ol></li><li class="chapter-item "><a href="../../Reference/Extending/index.html"><strong aria-hidden="true">2.2.</strong> Extending</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Reference/Extending/WIP_Driver.html"><strong aria-hidden="true">2.2.1.</strong> Giving gwion a new driver</a></li><li class="chapter-item "><a href="../../Reference/Extending/WIP_Plugins.html"><strong aria-hidden="true">2.2.2.</strong> Writing a Gwion plugin</a></li></ol></li><li class="chapter-item "><a href="../../Reference/Functions/index.html"><strong aria-hidden="true">2.3.</strong> Functions</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Reference/Functions/Lambdas.html"><strong aria-hidden="true">2.3.1.</strong> Lambda</a></li><li class="chapter-item "><a href="../../Reference/Functions/Variadic.html"><strong aria-hidden="true">2.3.2.</strong> Variadic functions</a></li></ol></li><li class="chapter-item "><a href="../../Reference/Types/index.html"><strong aria-hidden="true">2.4.</strong> Types</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Reference/Types/Enums.html"><strong aria-hidden="true">2.4.1.</strong> Enums</a></li><li class="chapter-item "><a href="../../Reference/Types/Function_Pointers.html"><strong aria-hidden="true">2.4.2.</strong> Function Pointers</a></li><li class="chapter-item "><a href="../../Reference/Types/Primitives.html"><strong aria-hidden="true">2.4.3.</strong> Primitive types</a></li><li class="chapter-item "><a href="../../Reference/Types/Typedefs.html"><strong aria-hidden="true">2.4.4.</strong> Type aliases</a></li><li class="chapter-item "><a href="../../Reference/Types/Unions.html"><strong aria-hidden="true">2.4.5.</strong> Union types</a></li></ol></li><li class="chapter-item "><a href="../../Reference/Preprocessor.html"><strong aria-hidden="true">2.5.</strong> Gwion Preprocessor</a></li></ol></li><li class="chapter-item expanded "><a href="../../Contributing/index.html"><strong aria-hidden="true">3.</strong> Contributing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Contributing/ContributingCode.html"><strong aria-hidden="true">3.1.</strong> Contributing Code</a></li><li class="chapter-item "><a href="../../Contributing/ContributingDocumentation.html"><strong aria-hidden="true">3.2.</strong> Contributing Documentation</a></li><li class="chapter-item "><a href="../../Contributing/ContributingTranslation.html"><strong aria-hidden="true">3.3.</strong> Contributing translations</a></li><li class="chapter-item expanded "><a href="../../Contributing/Plugins/index.html"><strong aria-hidden="true">3.4.</strong> Contributing Plugins</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Contributing/Plugins/introduction.html" class="active"><strong aria-hidden="true">3.4.1.</strong> Introduction</a></li><li class="chapter-item "><a href="../../Contributing/Plugins/reference.html"><strong aria-hidden="true">3.4.2.</strong> Plugin Reference</a></li><li class="chapter-item "><a href="../../Contributing/Plugins/credits.html"><strong aria-hidden="true">3.4.3.</strong> Credits</a></li></ol></li><li class="chapter-item "><a href="../../Contributing/Contributors.html"><strong aria-hidden="true">3.5.</strong> Contributors</a></li></ol></li><li class="chapter-item "><a href="../../Benchmarks.html">Benchmarks</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Gwion</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/Gwion/Gwion" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                            </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Plugins are an important aspect of Gwion's flexibility and extensibility. They allow you to customize behavior as well as develop novel functionality within Gwion itself.</p>
+<p>Much of Gwion's features <em>come</em> from plugins. Audio generation, file I/O, image editing and more.</p>
+<h2 id="what-is-a-plugin"><a class="header" href="#what-is-a-plugin">What is a Plugin?</a></h2>
+<p>Plugins are shared object files typically created from C source code. They consist of a few core functions required for the Gwion runtime to properly initialize and use it.</p>
+<h2 id="simple-plugin"><a class="header" href="#simple-plugin">Simple Plugin</a></h2>
+<p>Let's create a simple plugin which provides a single function: <code>add</code>. This will take two <code>int</code>s and return their sum as an <code>int</code>.</p>
+<p>First, open up your terminal and run the following shell commands within <code>Gwion/plug</code>:</p>
+<pre><code class="language-bash"># Create a new directory for our Adder plugin
+mkdir Adder
+
+# Navigate to the newly created directory
+cd Adder
+
+# Create a makefile for compilation
+printf &quot;include ../config.mk\ninclude ../config_post.mk\n&quot; &gt; Makefile
+
+# Create an adder.c file with your favorite text editor
+nano adder.c
+</code></pre>
+<p>We are greeted with any empty file. However, it won't be empty for long.</p>
+<p>Let's add the following code to the top of our file:</p>
+<pre><code class="language-c">#include &quot;plugin_dev.h&quot;
+</code></pre>
+<p>This will include all the necessary functions and macros to develop a plugin without much head scratching.</p>
+<p>Next, we need the <code>GWION_IMPORT</code> function. This is extremely important since it is what the Gwion runtime uses to set up your plugin. <code>GWION_IMPORT</code> is a macro which takes the name of your plugin: in this case that is &quot;Adder&quot;. Underneath the <code>include</code> let's add:</p>
+<pre><code class="language-c">GWION_IMPORT(Adder) {
+    // Init code here
+}
+</code></pre>
+<p>Within this function we register the public API of our plugin to Gwion. In our case, we want an <code>Adder</code> class with a single static function <code>add</code> that takes two numbers and returns their sum.</p>
+<p>Our first step is to create the <code>Adder</code> class. This is done with:</p>
+<pre><code class="language-c">GWION_IMPORT(Adder) {
+    // Begin our adder class
+    DECL_OB(const Type, t_adder, = gwi_class_ini(gwi, &quot;Adder&quot;, &quot;Object&quot;));
+}
+</code></pre>
+<p>Now, whenever we <code>ini</code> a class, we must also <code>end</code> it:</p>
+<pre><code class="language-c">GWION_IMPORT(Adder) {
+    // Begin our adder class
+    DECL_OB(const Type, t_adder, = gwi_class_ini(gwi, &quot;Adder&quot;, &quot;Object&quot;));
+
+    // End our adder class
+    GWI_BB(gwi_class_end(gwi));
+}
+</code></pre>
+<p>We also want to make sure to indicate that everything has gone OK. We do this by returning <code>GW_OK</code>:</p>
+<pre><code class="language-c">GWION_IMPORT(Adder) {
+    // Begin our adder class
+    DECL_OB(const Type, t_adder, = gwi_class_ini(gwi, &quot;Adder&quot;, &quot;Object&quot;));
+
+    // End our adder class
+    GWI_BB(gwi_class_end(gwi));
+
+    return GW_OK;
+}
+</code></pre>
+<p>Right now our code doesn't really do much; it creates an empty class and then exits. Let's expand this code to add a static function inside the class:</p>
+<pre><code class="language-c">GWION_IMPORT(Adder) {
+    // Begin our adder class
+    DECL_OB(const Type, t_adder, = gwi_class_ini(gwi, &quot;Adder&quot;, &quot;Object&quot;));
+
+    // Create a new function named `add` with a return type of `int`
+    // gwi_func_ini(gwi, return_type, name);
+    GWI_BB(gwi_func_ini(gwi, &quot;int&quot;, &quot;add&quot;));
+
+    // Register our two args `a` and `b` of type `int`
+    // gwi_func_arg(gwi, arg_type, name);
+    GWI_BB(gwi_func_arg(gwi, &quot;int&quot;, &quot;a&quot;));
+    GWI_BB(gwi_func_arg(gwi, &quot;int&quot;, &quot;b&quot;));
+
+    // Mark the function as completely declared
+    GWI_BB(gwi_func_end(gwi, adder_add, ae_flag_static));
+
+    // End our adder class
+    GWI_BB(gwi_class_end(gwi));
+
+    return GW_OK;
+}
+</code></pre>
+<p>Looks like we are good to go! Let's compile...and:</p>
+<pre><code>adder.c: In function 'import':
+adder.c:22:28: error: 'adder_add' undeclared (first use in this function)
+   22 |   GWI_BB(gwi_func_end(gwi, adder_add, ae_flag_static));
+      |                            ^~~~~~~~~
+</code></pre>
+<p>When we marked the function as completely declared with <code>gwi_func_end</code>, we gave the function implementation <code>adder_add</code> as an argument. This tells Gwion that our <code>Adder.add</code> function in Gwion corresponds to the C function <code>adder_add</code>. However we haven't actually defined it! Let's do that. Above our <code>GWION_IMPORT</code> function, add:</p>
+<pre><code class="language-c">// The `SFUN` macro defines a static function
+// The `static` here is actually a C keyword, unrelated to Gwion
+static SFUN(sfun) {
+    // Function body
+}
+</code></pre>
+<p>Let's recall what our <code>Adder.add</code> function does. It takes two <code>int</code> parameters and returns an <code>int</code>. Gwion provides facilities for doing this:</p>
+<pre><code class="language-c">// The `SFUN` macro defines a static function
+// The `static` here is actually a C keyword, unrelated to Gwion
+static SFUN(sfun) {
+    // Retrieve the arguments
+    // `a` is in memory at offset 0
+    const m_int a = *(m_int*)MEM(0);
+    // `b` is in memory at offset `SZ_INT`
+    // This is because `a` has size `SZ_INT` and `b` is after `a`
+    const m_int b = *(m_int*)MEM(SZ_INT);
+
+    // We now set the return value, given as a void pointer with the `RETURN` macro
+    // We need to cast it to the pointer type we want to return and then assign the return value
+    *(m_int*)RETURN = a + b;
+}
+</code></pre>
+<p>Finally, we can test our plugin. After running <code>make</code> (which creates <code>Adder.so</code>) in the directory, create a new file called <code>add.gw</code> and insert the following code:</p>
+<pre><code class="language-gwion">#! We import our newly created plugin
+#require Adder
+
+#! Let's call our add function
+&lt;&lt;&lt; Adder.add(1, 2) &gt;&gt;&gt;;
+</code></pre>
+<p>If all goes well, running the following shell command should result in &quot;3&quot; being printed:</p>
+<pre><code class="language-bash">gwion -p. add.gw
+</code></pre>
+<!-- added by doc2src.sh -->
+<footer>
+built with <a href="https://github.com/rust-lang/mdBook/">mdBook</a></br>
+You'll find the source <a href="https://github.com/Gwion/Gwion">here</a>, Luke!
+</footer>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../Contributing/Plugins/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../Contributing/Plugins/reference.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../Contributing/Plugins/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../Contributing/Plugins/reference.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+                <script src="../../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../editor_mine.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mode-gwion.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
